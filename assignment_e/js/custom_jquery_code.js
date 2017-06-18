@@ -12,13 +12,15 @@ $(function() {
 
     $("#courses").children().on("click", function() {
         let inputTxt = $("div#course_name input").val();
+        inputTxt = $("<li>" + inputTxt + "</li>");
         $(this).after(inputTxt);
     });
 
-    $("#courses").children().children().children().css({"border":"1px solid green"}).on("click", function(event) {
+    $("#courses").children().children().children().on("click", function(event) {
         let inputTxt = $("div#course_name input").val();
+        inputTxt = $("<li>" + inputTxt + "</li>");
         $(this).after(inputTxt);
         event.stopPropagation();
     });
 
-});
+})
